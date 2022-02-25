@@ -14,13 +14,17 @@ fn main() {
     println!("What is your name?"); // print line to standard output
     let name = what_is_your_name(); // declare 'name' and set its value equal to output of 'what_is_your_name'
     let visitor_list: [&str; 3] = ["bert", "alex", "steve"]; // declare array with names
+    let mut allow = false; // create `allow' boolean set to false
     for visitor in &visitor_list {
-        // for i in 0..visitor_list.len() functions the same
+        // goes through the contents of 'visitor_list'
         if visitor == &name {
-            // checks if any names in the array 'visitor_list'
-            println!("Hello {}", name);
-        } else {
-            println!("You are not on the list. Get lost.");
+            allow = true;
         }
+    }
+
+    if allow == true {
+        println!("Welcome {}", name);
+    } else {
+        println!("Get lost {}", name);
     }
 }
