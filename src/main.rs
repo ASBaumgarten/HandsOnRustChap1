@@ -13,5 +13,10 @@ fn what_is_your_name() -> String {
 fn main() {
     println!("What is your name?"); // print line to standard output
     let name = what_is_your_name(); // declare 'name' and set its value equal to output of 'what_is_your_name'
-    println!("Hello, {:?}", name); // print line to output
+    if name == "bert" || name == "alex" {
+        // check if 'name' variable contains 'bert' or 'alex'
+        println!("Welcome {}", name);
+    } else {
+        println!("Sorry, you are not on the list.");
+    }
 }
