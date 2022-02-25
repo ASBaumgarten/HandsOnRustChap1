@@ -1,6 +1,6 @@
 use std::io::stdin;
 
-fn what_is_your_name()->String {
+fn what_is_your_name()->String { // '-> String' determines the return type
     let mut your_name = String::new(); // declare variable with 'let' and make it mutable with 'mut'
     stdin()
         .read_line(&mut your_name) // take standard input, real_line to store it in 'your_name'
